@@ -1,0 +1,70 @@
+//.owl-nav {
+//  display: flex;
+//  justify-content: space-between;
+//  position: absolute;
+//  left: 0;
+//  right: 0;
+//  top: 50%;
+//  transform: translateY(-50%);
+//  pointer-events: none;
+//  z-index: 10;
+//
+//  .owl-next,
+//  .owl-prev {
+//    display: flex;
+//    width: 29px;
+//    height: 74px;
+//    pointer-events: all;
+//    overflow: hidden;
+//    text-indent: -999rem;
+//    background-repeat: no-repeat !important;
+//    background-position: center center !important;
+//    background-size: 59px auto !important;
+//    -webkit-transition: .45s;
+//    transition: .45s;
+//
+//    &.disabled {
+//      visibility: hidden;
+//    }
+//  }
+//
+//  .owl-next {
+//    background-image: url(../assets/img/icons/chevron-thin-right.svg) !important;
+//  }
+//
+//  .owl-prev {
+//    background-image: url(../assets/img/icons/chevron-thin-left.svg) !important;
+//  }
+//}
+//
+//@include respond-to($md) {
+//  .owl-nav {
+//    .owl-next,
+//    .owl-prev {
+//      width: 103px;
+//
+//    }
+//  }
+//}
+//
+//@include respond-to($xs) {
+//  .owl-nav {
+//    .owl-next,
+//    .owl-prev {
+//      width: 40px;
+//      height: 40px;
+//    }
+//  }
+//}
+//
+//@media screen and (max-width: 420px) {
+//  .owl-nav {
+//    .owl-next,
+//    .owl-prev {
+//      width: 58px;
+//      height: 23px;
+//      background-size: 45px auto !important;
+//    }
+//  }
+//}
+

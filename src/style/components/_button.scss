@@ -1,0 +1,21 @@
+.btn{
+  display: inline-block;
+  color: #ffffff;
+  font-family: $primary-font;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.25;
+  border-radius: 5px;
+  padding: 20px 32px;
+  transition: background-color .35s, color .3s, box-shadow .35s;
+  &_main{
+    border: 1px solid $white;
+    background-color: transparent;
+  }
+  &:hover,
+  &:focus{
+    background-color: $white;
+    color: $light-green;
+    box-shadow: 2px 4px 49px rgba(35, 93, 15, 0.65);
+  }
+}

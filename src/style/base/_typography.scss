@@ -1,0 +1,37 @@
+/**
+*TEXT UTILITIES
+*/
+
+.text {
+
+  &_xl {
+    font-size: 30px;
+  }
+
+  &_medium {
+    font-size: 20px;
+  }
+
+  &_small {
+    font-size: 15px;
+  }
+
+  &_extra-small {
+    font-size: 13px;
+  }
+  &_white{
+    color: $white;
+  }
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 400;
+  color: $black;
+  &_medium{
+    font-size: 30px;
+  }
+  &_big {
+    font-size: 46px;
+  }
+}

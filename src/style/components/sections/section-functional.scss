@@ -1,0 +1,27 @@
+.section-functional {
+  background-color: $off-white;
+  padding: 60px 0 50px;
+  .card-list__item {
+    margin-bottom: 45px;
+    &:nth-child(6) {
+      .card__bg-img {
+        -webkit-background-size: 85%;
+        background-size: 85%;
+      }
+    }
+  }
+
+  .card {
+    text-align: center;
+    line-height: 1.55;
+    color: $dark-gray;
+
+    &__bg-img {
+      background-position: center center;
+      background-repeat: no-repeat;
+      -webkit-background-size: 75%;
+      background-size: 75%;
+      min-height: 312px;
+    }
+  }
+}

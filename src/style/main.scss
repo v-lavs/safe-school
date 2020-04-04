@@ -1,0 +1,27 @@
+@import 'utils/variables';
+@import 'utils/mixins';
+
+@import '../lib/owl-slider/scss/core';
+
+@import 'base/reset';
+@import 'base/typography';
+@import 'base/base';
+
+@import 'components/grid';
+@import 'components/sections/section-banner';
+@import 'components/sections/section-facilities';
+@import 'components/sections/section-functional';
+@import 'components/sections/section-advantages';
+@import 'components/sections/section-delivery-notification';
+
+
+@import 'components/slider';
+@import 'components/nav';
+@import 'components/button';
+
+@import 'components/card';
+@import 'components/header';
+@import 'components/footer';
+
+
+

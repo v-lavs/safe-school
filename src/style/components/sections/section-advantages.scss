@@ -1,0 +1,34 @@
+.section-advantages{
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 596px;
+  padding: 65px 0 75px;
+  color: $white;
+  line-height: 1.55;
+  .wrap-btn{
+    text-align: center;
+  }
+  .card{
+    padding: 0 10px;
+
+    &__bg-icon{
+      background-position: center center;
+      background-repeat: no-repeat;
+      -webkit-background-size: 82px;
+      background-size: 82px;
+      height: 82px;
+      margin-bottom: 15px;
+    }
+  }
+  .card-list__item {
+    margin-bottom: 55px;
+    &:nth-child(4) {
+      .card__bg-icon {
+        -webkit-background-size: 140px;
+        background-size: 140px;
+      }
+    }
+  }
+}

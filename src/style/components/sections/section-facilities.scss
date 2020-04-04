@@ -1,0 +1,43 @@
+.section-facilities {
+  padding: 20px 0;
+
+  .decor-title {
+    &:after {
+      display: none;
+    }
+
+    &:before {
+      transform: translateX(-50%)rotate(45deg);
+    }
+  }
+
+  .card-list {
+
+
+    &__item {
+      color: $light-gray;
+      margin-bottom: 30px;
+    }
+
+    .card {
+      &__bg-icon {
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        -webkit-background-size: contain;
+        background-size: contain;
+        min-height: 70px;
+        margin-bottom: 15px;
+      }
+
+      &__title {
+        margin-bottom: 10px;
+        letter-spacing: -0.76px;
+      }
+
+      &__text {
+        letter-spacing: -0.51px;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,43 @@
+.section-banner {
+  display: flex;
+  background-position: 0 center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 748px;
+  padding-top: 100px;
+  color: $white;
+
+  .container {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .wrap-img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+  }
+  .text-content{
+    position: relative;
+    width: 63%;
+    z-index: 1;
+  }
+  .title-site {
+    color: $white;
+    font-family: $primary-font;
+    letter-spacing: -1.14px;
+    margin-bottom: 35px;
+  }
+
+  .text_banner {
+    font-family: $primary-font;
+    font-weight: 300;
+    line-height: 1.55;
+    width: 90%;
+    margin-bottom: 35px;
+  }
+}
+

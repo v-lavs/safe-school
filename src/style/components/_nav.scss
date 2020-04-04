@@ -1,0 +1,138 @@
+.main-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+
+
+  .menu {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .menu-item {
+    margin-left: 35px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  .menu-link {
+    position: relative;
+    display: block;
+
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      background-color: #9edc3c;
+      height: 5px;
+      width: 0;
+      left: 0;
+      right: 0;
+      bottom: -40px;
+      transition: .35s;
+    }
+
+    &:hover:before,
+    &:focus:before {
+      transition: .35s;
+      width: 100%;
+    }
+  }
+}
+
+.btn-close {
+  position: absolute;
+  right: 35px;
+  top: 20px;
+  display: none;
+  width: 28px;
+  height: 28px;
+  background-color: transparent;
+  border: none;
+
+  &:before,
+  &:after {
+    position: absolute;
+    content: '';
+    width: 3px;
+    height: 100%;
+    background-color: #999999;
+  }
+
+  &:before {
+    top: -50%;
+    transform: translate(50%, 50%) rotate(45deg);
+  }
+
+  &:after {
+    transform: translate(50%, -50%) rotate(-45deg);
+  }
+}
+
+
+@media screen and (max-width: 1600px) {
+  .main-nav {
+    .menu__item {
+      font-size: 21px;
+      margin: 0 20px;
+    }
+  }
+}
+
+@include respond-to($lg) {
+  .main-nav {
+    padding-top: 60px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    max-width: 320px;
+    background-color: $white;
+    max-height: 100%;
+    overflow-y: auto;
+    text-align: left;
+    transition: transform .5s;
+    transform: translateX(-100%);
+    z-index: 999;
+
+    .menu__item {
+      margin: 0;
+    }
+
+    &.open {
+      transform: translateX(0);
+    }
+
+    .menu {
+      flex-direction: column;
+      padding: 60px 20px;
+
+      &__item {
+
+      }
+
+      .menu__link:before {
+        display: none !important;
+      }
+
+
+      &__item {
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+    }
+  }
+
+  .burger {
+    display: block !important;
+  }
+  .btn-close {
+    display: block !important;
+  }
+}
+
+
