@@ -1,4 +1,4 @@
-.section-advantages{
+.section-advantages {
   -webkit-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
@@ -7,13 +7,15 @@
   padding: 65px 0 75px;
   color: $white;
   line-height: 1.55;
-  .wrap-btn{
+
+  .wrap-btn {
     text-align: center;
   }
-  .card{
+
+  .card {
     padding: 0 10px;
 
-    &__bg-icon{
+    &__bg-icon {
       background-position: center center;
       background-repeat: no-repeat;
       -webkit-background-size: 82px;
@@ -22,8 +24,10 @@
       margin-bottom: 15px;
     }
   }
+
   .card-list__item {
     margin-bottom: 55px;
+
     &:nth-child(4) {
       .card__bg-icon {
         -webkit-background-size: 140px;

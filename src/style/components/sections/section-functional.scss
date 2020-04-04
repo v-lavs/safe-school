@@ -1,8 +1,10 @@
 .section-functional {
   background-color: $off-white;
   padding: 60px 0 50px;
+
   .card-list__item {
     margin-bottom: 45px;
+
     &:nth-child(6) {
       .card__bg-img {
         -webkit-background-size: 85%;
