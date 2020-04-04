@@ -12,6 +12,17 @@
 
 $(document).ready(function () {
 
+    var scrolled;
+    window.onscroll = function() {
+        scrolled = window.pageYOffset || document.documentElement.scrollTop;
+        if(scrolled > 100){
+            $(".header").css({"background": "linear-gradient(to right, #30b025, #6fd230)"})
+        }
+        if(100 > scrolled){
+            $(".header").css({"background": "transparent"})
+        }
+    }
+
     var nav = $('.main-nav');
 
     /**
@@ -30,9 +41,6 @@ $(document).ready(function () {
         jQuery('.backdrop').fadeOut();
     });
 
-    $('.sub-menu__toggle').click(function (e) {
-        $(this).toggleClass('sub-menu__toggle_active')
-    });
 
     /**
      * OWL-CAROUSEL SCRIPT
@@ -53,10 +61,6 @@ $(document).ready(function () {
                 items: 1,
                 stagePadding: 150,
             },
-            // 820: {
-            //     items: 1,
-            //     stagePadding: 180,
-            // },
             1190: {
                 items: 3,
             }
