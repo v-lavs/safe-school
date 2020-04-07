@@ -4,7 +4,6 @@
 
 //= include ../lib/jquery-3.3.1.min.js
 //= include ../lib/owl-slider/js/build.js
-//= include ../lib/diamonds/jquery.diamonds.js
 
 
 /**
@@ -137,17 +136,5 @@ $(document).ready(function () {
 
     smoothScrollToAnchor('#requestDemo');
     smoothScrollToAnchor('.header .menu__link, .sub-menu__link');
-
-    $(".diamond-grid").diamonds({
-          size: 420, // Size of the squares
-        gap: 26 // Pixels between squares
-    });
-    $(".diamondswrap").diamonds("draw");
-    $(".diamond-grid").diamonds("setOptions", {
-        hideIncompleteRow: true,
-        autoRedraw :true,// Auto redraw diamonds when it detects resizing.
-        itemSelector :".item"
-    });
-
 
 });
