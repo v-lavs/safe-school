@@ -1,0 +1,32 @@
+.section-presentation{
+  background-position: center center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 550px;
+  padding-top: 55px;
+  color: $white;
+  .section-title{
+    flex-shrink: 0;
+  }
+  .container  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .wrap-img{
+    width: 66%;
+    overflow: hidden;
+    img{
+      width: 100%;
+    }
+  }
+  .block-text-content{
+    width: 34%;
+    padding: 40px 35px;
+  }
+  .text{
+    line-height: 1.5;
+    margin-bottom: 35px;
+  }
+}
