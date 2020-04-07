@@ -1,4 +1,14 @@
 
+/*@font-face {*/
+  /*font-family: 'GeogrotesqueCyr';*/
+  /*src: url('GeogrotesqueCyr-Regular.eot?#iefix') format('embedded-opentype'),*/
+  /*url('GeogrotesqueCyr-Regular.woff') format('woff'),*/
+  /*url('GeogrotesqueCyr-Regular.ttf')  format('truetype'),*/
+  /*url('GeogrotesqueCyr-Regular.svg#GeogrotesqueCyr-Regular') format('svg');*/
+  /*font-weight: 400;*/
+  /*font-style: normal;*/
+/*}*/
+
 @font-face {
   font-family: 'GeogrotesqueCyr';
   src: url('GeogrotesqueCyr-Regular.eot?#iefix') format('embedded-opentype'),
@@ -8,6 +18,7 @@
   font-weight: 400;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'ProximaNova';
   src: url('ProximaNova-Light.eot?#iefix') format('embedded-opentype'),
@@ -18,13 +29,37 @@
   font-weight: 300;
   font-style: normal;
 }
+
+/*@font-face {*/
+  /*font-family: 'ProximaNova';*/
+  /*src: url('ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),*/
+  /*url('ProximaNova-Regular.otf')  format('opentype'),*/
+  /*url('ProximaNova-Regular.woff') format('woff'),*/
+  /*url('ProximaNova-Regular.ttf')  format('truetype'),*/
+  /*url('ProximaNova-Regular.svg#ProximaNova-Regular') format('svg');*/
+  /*font-weight: 400;*/
+  /*font-style: normal;*/
+/*}*/
+
+
 @font-face {
   font-family: 'ProximaNova';
   src: url('ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
-  url('ProximaNova-Regular.otf')  format('opentype'),
   url('ProximaNova-Regular.woff') format('woff'),
   url('ProximaNova-Regular.ttf')  format('truetype'),
   url('ProximaNova-Regular.svg#ProximaNova-Regular') format('svg');
   font-weight: 400;
   font-style: normal;
 }
+
+
+@font-face {
+  font-family: 'PTSans-Caption';
+  src: url('PTSans-Caption.eot?#iefix') format('embedded-opentype'),
+  url('PTSans-Caption.woff') format('woff'),
+  url('PTSans-Caption.ttf')  format('truetype'),
+  url('PTSans-Caption.svg#PTSans-Caption') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+

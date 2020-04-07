@@ -2,6 +2,7 @@
 @import 'utils/mixins';
 
 @import '../lib/owl-slider/scss/core';
+@import '../lib/diamonds/diamonds';
 
 @import 'base/reset';
 @import 'base/typography';
@@ -13,6 +14,7 @@
 @import 'components/sections/section-functional';
 @import 'components/sections/section-advantages';
 @import 'components/sections/section-delivery-notification';
+@import 'components/sections/section-gallery';
 
 
 @import 'components/slider';
