@@ -99,7 +99,7 @@
   .section-functional {
     .card-list__item {
       width: 100%;
-
+      line-height: 1.25;
       &:nth-child(6) {
         .card__bg-img {
           -webkit-background-size: 50%;
@@ -117,13 +117,8 @@
 }
 
 @media all and(max-width: 380px) {
-  .card-list__item{
-    .text {
-      line-height: 1.25;
-    }
-  }
-  .card .card__bg-img{
+  .card__bg-img{
     background-size: 44%;
-    min-height: 140px;
+    min-height: 167px;
   }
 }
