@@ -35,7 +35,7 @@ $(document).ready(function () {
         $('body').addClass('noscroll');
     });
 
-    $('.btn-close, .backdrop').click(function (e) {
+    $('.btn-close, .backdrop, .menu__link').click(function (e) {
         e.preventDefault();
         nav.removeClass('open');
        $('.backdrop').fadeOut();
