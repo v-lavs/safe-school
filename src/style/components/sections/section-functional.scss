@@ -100,6 +100,7 @@
     .card-list__item {
       width: 100%;
       line-height: 1.25;
+
       &:nth-child(6) {
         .card__bg-img {
           -webkit-background-size: 50%;
@@ -117,8 +118,10 @@
 }
 
 @media all and(max-width: 380px) {
-  .card__bg-img{
-    background-size: 44%;
-    min-height: 167px;
+  .section-functional {
+    .card__bg-img {
+      background-size: 44%;
+      min-height: 167px;
+    }
   }
 }
