@@ -72,12 +72,25 @@
     .card-list__item {
       width: 90%;
       margin: 0 auto 45px;
+
+      &:nth-child(6) {
+        .card__bg-img {
+          -webkit-background-size: 52%;
+          background-size: 52%;
+        }
+      }
+    }
+
+    .card-list__item {
+      width: 100%;
+
     }
 
     .card__bg-img {
-      -webkit-background-size: 50%;
-      background-size: 50%;
-      min-height: 230px;
+      margin-bottom: 10px;
+      -webkit-background-size: 45%;
+      background-size: 45%;
+      min-height: 220px;
     }
   }
 }
@@ -86,6 +99,7 @@
   .section-functional {
     .card-list__item {
       width: 100%;
+
       &:nth-child(6) {
         .card__bg-img {
           -webkit-background-size: 50%;
@@ -93,10 +107,17 @@
         }
       }
     }
+
     .card__bg-img {
       -webkit-background-size: 39%;
       background-size: 39%;
       min-height: 190px;
     }
+  }
+}
+
+@media all and(max-width: 380px) {
+  .card__bg-img{
+    min-height: 140px;
   }
 }
