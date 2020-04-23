@@ -20,11 +20,13 @@
     bottom: 0;
     width: 50%;
   }
-  .text-content{
+
+  .text-content {
     position: relative;
     width: 63%;
     z-index: 1;
   }
+
   .title-site {
     color: $white;
     font-family: $secondary-font;
@@ -41,3 +43,51 @@
   }
 }
 
+
+@media all and (max-width: 1200px) {
+  .section-banner {
+    .wrap-img {
+      right: 20px;
+      width: 45%;
+    }
+  }
+}
+
+@media all and (max-width: 767px) {
+  .section-banner {
+    padding-top: 30px;
+   .text-content{
+     width: 85%;
+   }
+    .wrap-img {
+      width: 50%;
+      right: 0;
+      bottom: -25px;
+    }
+  }
+}
+
+@media all and(max-width: 450px){
+  .section-banner{
+    padding-top: 0;
+    .title-site{
+      margin-bottom: 25px;
+      font-size: 30px;
+    }
+    .btn_main{
+      padding: 14px 22px;
+    }
+    .text-content{
+      width: 100%;
+    }
+    .text{
+      width: 100%;
+      margin-right: 0;
+    }
+    .wrap-img {
+      right: 0;
+      bottom: -15px;
+    }
+  }
+
+}

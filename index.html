@@ -13,6 +13,7 @@
 </head>
 <body>
 <div class="wrapper">
+
     <header class="header">
         <div class="container">
             <div class="info-box">
@@ -24,33 +25,41 @@
                 </a>
             </div>
             <nav class="main-nav">
+                <button class="btn-close"></button>
                 <div class="right-bar">
-                    <a href="tel:+7 (987) 019-48-00" class="link-right-bar">
+                    <a href="tel:+7 (987) 019-48-00" class="right-bar__link">
                         <img src="assets/img/icons/tel.svg" alt="" class="icon-link">
                         +7 (987) 019-48-00
                     </a>
-                    <a href="mailto:support@safesch.ru" class="link-right-bar">
+                    <a href="mailto:support@safesch.ru" class="right-bar__link">
                         <img src="assets/img/telegram.png" alt="" class="icon-link">
                         support@safesch.ru
                     </a>
                 </div>
                 <ul class="menu">
-                    <li class="menu-item">
-                        <a href="#" class="menu-link">Возможности</a>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Возможности</a>
                     </li>
-                    <li class="menu-item">
-                        <a href="#" class="menu-link">Как это работает?</a>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Как это работает?</a>
                     </li>
-                    <li class="menu-item">
-                        <a href="#" class="menu-link">Уведомления</a>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Уведомления</a>
                     </li>
-                    <li class="menu-item">
-                        <a href="#" class="menu-link">Преимущества</a>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Преимущества</a>
                     </li>
                 </ul>
             </nav>
+            <button class="burger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+            <div class="backdrop"></div>
         </div>
     </header>
+
     <section class="section-banner" style="background-image: url(assets/img/bg-intro.png);">
         <div class="container">
             <div class="text-content">
@@ -182,7 +191,7 @@
                     </p>
                 </li>
                 <li class="card card-list__item">
-                    <div class="card__bg-img" style="background-image: url(assets/img/4a.png);">
+                    <div class="card__bg-img" style="background-image: url(assets/img/4b.png);">
 
                     </div>
 
@@ -221,9 +230,24 @@
             <div class="sub-title text">Cистема "безопасная школа" автоматически уведомит родителей
                 о времени и направлении прохода бесплатно
             </div>
-            <div class="block-notification">
-                <div class="card-notification">
-
+            <div class="home-slider owl-carousel owl-theme" id="slider-carousel">
+                <div class="item card-notification">
+                    <div class="wrap-img-phone">
+                        <img src="assets/img/phone1.png" alt="" class="img-phone">
+                        <img src="assets/img/content-phone1.jpg" alt="" class="img-content-phone">
+                    </div>
+                </div>
+                <div class="item card-notification">
+                    <div class="wrap-img-phone">
+                        <img src="assets/img/phone1.png" alt="" class="img-phone">
+                        <img src="assets/img/content-phone2.jpg" alt="" class="img-content-phone">
+                    </div>
+                </div>
+                <div class="item card-notification">
+                    <div class="wrap-img-phone">
+                        <img src="assets/img/phone1.png" alt="" class="img-phone">
+                        <img src="assets/img/content-phone3a.jpg" alt="" class="img-content-phone">
+                    </div>
                 </div>
             </div>
         </div>
@@ -233,7 +257,7 @@
         <div class="container">
             <h2 class="title section-title decor-title decor-title_white">Почему школы выбирают нас?</h2>
             <ul class="card-list">
-                <li class="card card-list__item card-list__item_midlle">
+                <li class="card card-list__item">
                     <div class="card__bg-icon" style="background-image: url(assets/img/icons/portfolio.svg);">
 
                     </div>
@@ -241,7 +265,7 @@
                         Богатый опыт в СКУД для образовательных учреждений
                     </p>
                 </li>
-                <li class="card card-list__item card-list__item_midlle">
+                <li class="card card-list__item">
                     <div class="card__bg-icon" style="background-image: url(assets/img/icons/customer-service.svg);">
 
                     </div>
@@ -251,7 +275,7 @@
                         и сервис
                     </p>
                 </li>
-                <li class="card card-list__item card-list__item_midlle">
+                <li class="card card-list__item">
                     <div class="card__bg-icon" style="background-image: url(assets/img/icons/calculator.svg);">
 
                     </div>
@@ -260,7 +284,7 @@
                         на рынке
                     </p>
                 </li>
-                <li class="card card-list__item card-list__item_midlle">
+                <li class="card card-list__item">
                     <div class="card__bg-icon" style="background-image: url(assets/img/logo-3.png);">
 
                     </div>
@@ -314,7 +338,6 @@
                     </div>
                 </li>
             </ul>
-
         </div>
     </section>
 
@@ -328,7 +351,9 @@
                     This is Photoshop's version of Lorem Ipsum. Proin gravida nibh This is Photoshop's version of Lorem
                     Ipsum.
                 </p>
-                <button class="btn btn_main">Скачать презентацию PDF</button>
+                <div class="wrap-btn">
+                    <button class="btn btn_main">Скачать презентацию PDF</button>
+                </div>
             </div>
         </div>
     </section>
@@ -337,8 +362,10 @@
         <div class="container">
             <ul class="contact-list">
                 <li class="contact-list__item">
-                    <svg class="icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                         viewBox="0 0 511.998 511.998" style="enable-background:new 0 0 511.998 511.998;" xml:space="preserve">
+                    <svg class="icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 511.998 511.998" style="enable-background:new 0 0 511.998 511.998;"
+                         xml:space="preserve">
 <g transform="translate(0 -1)">
 	<g>
 		<g>
@@ -411,13 +438,15 @@
                         <g>
 </g>
 </svg>
-                    <a href="#" class="contact-list__link text">
+                    <a href="#" class="contact-list__link">
                         г. Бирск, Интернациональная, 15
                     </a>
                 </li>
                 <li class="contact-list__item">
-                    <svg class="icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                         viewBox="0 0 512.034 512.034" style="enable-background:new 0 0 512.034 512.034;" xml:space="preserve">
+                    <svg class="icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 512.034 512.034" style="enable-background:new 0 0 512.034 512.034;"
+                         xml:space="preserve">
 <g transform="translate(-1)">
 	<g>
 		<g>
@@ -493,13 +522,15 @@
                         <g>
 </g>
 </svg>
-                    <a href="tel:+79870194800" class="contact-list__link text">
+                    <a href="tel:+79870194800" class="contact-list__link">
                         +7 (987) 019-48-00
                     </a>
                 </li>
                 <li class="contact-list__item">
-                    <svg class="icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                         viewBox="0 0 511.974 511.974" style="enable-background:new 0 0 511.974 511.974;" xml:space="preserve">
+                    <svg class="icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 511.974 511.974" style="enable-background:new 0 0 511.974 511.974;"
+                         xml:space="preserve">
 <g>
 	<g>
 		<g>
@@ -562,13 +593,15 @@
 </g>
 </svg>
 
-                    <a href="mailto:support@safesch.ru" class="contact-list__link text">
+                    <a href="mailto:support@safesch.ru" class="contact-list__link">
                         support@safesch.ru
                     </a>
                 </li>
                 <li class="contact-list__item">
-                    <svg class="icon" version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                         width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+                    <svg class="icon" version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100"
+                         xml:space="preserve">
 <g>
 	<path fill-rule="evenodd" clip-rule="evenodd" d="M51.492,24.148c0.899,0.104,1.802,0.198,2.7,0.318
 		c0.486,0.065,0.972,0.158,1.448,0.271c2.282,0.543,3.351,1.788,3.473,4.263c0.085,1.705,0.022,3.42-0.015,5.129
@@ -613,23 +646,23 @@
 		C4.829,28.595,4.359,28.636,3.783,28.663z"/>
 </g>
 </svg>
-                    <a href="#" class="contact-list__link text">
+                    <a href="#" class="contact-list__link">
                         vk.com/safesch
                     </a>
                 </li>
             </ul>
         </div>
-            <div class="map-responsive">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2264.7901014150248!2d55.5258349160365!3d55.4140128255373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43de9025341eb341%3A0xba69859d1db6b365!2z0YPQuy4g0JjQvdGC0LXRgNC90LDRhtC40L7QvdCw0LvRjNC90LDRjywgMTUsINCR0LjRgNGB0LosINCg0LXRgdC_LiDQkdCw0YjQutC-0YDRgtC-0YHRgtCw0L0sINCg0L7RgdGB0LjRjywgNDUyNDUz!5e0!3m2!1sru!2sua!4v1586275288188!5m2!1sru!2sua"
-                        width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""
-                        aria-hidden="false" tabindex="0">
-                </iframe>
-            </div>
+        <div class="map-responsive">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2264.7901014150248!2d55.5258349160365!3d55.4140128255373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43de9025341eb341%3A0xba69859d1db6b365!2z0YPQuy4g0JjQvdGC0LXRgNC90LDRhtC40L7QvdCw0LvRjNC90LDRjywgMTUsINCR0LjRgNGB0LosINCg0LXRgdC_LiDQkdCw0YjQutC-0YDRgtC-0YHRgtCw0L0sINCg0L7RgdGB0LjRjywgNDUyNDUz!5e0!3m2!1sru!2sua!4v1586275288188!5m2!1sru!2sua"
+                    width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""
+                    aria-hidden="false" tabindex="0">
+            </iframe>
+        </div>
     </section>
     <footer class="footer">
         <div class="container">
             <div class="info-box">
-                <a href="#" class="footer-logo">
+                <a href="#" class="logo-site">
                     <img src="assets/img/logo-footer.png" alt="Безопасная школа" class="img img-logo">
                 </a>
                 <a href="#" class="logo">

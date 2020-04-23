@@ -5,7 +5,6 @@
 //= include ../lib/jquery-3.3.1.min.js
 //= include ../lib/owl-slider/js/build.js
 
-
 /**
  * CUSTOM SCRIPTS
  **/
@@ -13,12 +12,12 @@
 $(document).ready(function () {
 
     var scrolled;
-    window.onscroll = function() {
+    window.onscroll = function () {
         scrolled = window.pageYOffset || document.documentElement.scrollTop;
-        if(scrolled > 100){
+        if (scrolled > 100) {
             $(".header").css({"background": "linear-gradient(to right, #30b025, #6fd230)"})
         }
-        if(100 > scrolled){
+        if (100 > scrolled) {
             $(".header").css({"background": "transparent"})
         }
     }
@@ -32,91 +31,64 @@ $(document).ready(function () {
     $('.burger').click(function (e) {
         e.preventDefault();
         nav.addClass('open');
-        jQuery('.backdrop').fadeIn();
+        $('.backdrop').fadeIn();
+        $('body').addClass('noscroll');
     });
 
     $('.btn-close, .backdrop').click(function (e) {
         e.preventDefault();
         nav.removeClass('open');
-        jQuery('.backdrop').fadeOut();
+       $('.backdrop').fadeOut();
+        $('body').removeClass('noscroll');
     });
 
 
     /**
      * OWL-CAROUSEL SCRIPT
      **/
-    jQuery("#slider-carousel").owlCarousel({
-        items: 3,
-        pagination: false,
-        dots: false,
-        nav: true,
-        slideSpeed: 2000,
-        margin: 0,
-        responsive: {
-            0: {
-                items: 1,
-                stagePadding: 75,
-            },
-            580: {
-                items: 1,
-                stagePadding: 150,
-            },
-            1190: {
-                items: 3,
-            }
-        }
+    var $homeSlider = $(".home-slider");
+
+    $(window).resize(function () {
+        showHomeSlider();
     });
 
-    var planks = $('#slider-carousel1');
-    var clonedContent = planks.children().clone(true, true);
-
-    function handleResponsiveSlides() {
-        var isInit = planks.data('owl.carousel');
-        if ($(window).width() < 1190) {
-            if (!planks.hasClass('owl-carousel')) {
-                planks.addClass('owl-carousel');
-                planks.owlCarousel({
-                    items: 1,
-                    autoHeight: false,
-                    pagination: false,
-                    dots: true,
-                    autoplay: true,
-                    autoplayTimeout: 6000,
-                    slideSpeed: 1000,
-                    stopOnHover: true,
-                    margin: 20
-                })
-            }
-        } else {
-            if (isInit) {
-                planks.owlCarousel('destroy');
-
-                planks.removeClass('owl-carousel owl-loaded owl-drag');
-                planks.empty().append(clonedContent);
+    function showHomeSlider() {
+        if ($homeSlider.data("owlCarousel") !== "undefined") {
+            if (window.matchMedia('(max-width: 768px)').matches) {
+                initialHomeSlider();
+            } else {
+                destroyHomeSlider();
             }
         }
     }
 
-    handleResponsiveSlides();
+    showHomeSlider();
 
-    $(window).on('resize', function () {
-        handleResponsiveSlides()
-    });
+    function initialHomeSlider() {
+        $homeSlider.addClass("owl-carousel").owlCarousel({
+            items: 2,
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            smartSpeed: 1000,
+            responsive: {
+                0: {
+                    items: 1,
+                    margin:0,
+                },
+                580: {
+                    margin: 30,
+                    items:2,
+                }
+            }
+        });
+    }
 
-    // jQuery("#slider-carousel1").owlCarousel({
-    //     items: 1,
-    //     autoHeight: false,
-    //     pagination: false,
-    //     dots: true,
-    //     autoplay: true,
-    //     autoplayTimeout: 8000,
-    //     slideSpeed: 5000,
-    //     stopOnHover: true,
-    //     margin: 0,
-    // });
+    function destroyHomeSlider() {
+        $homeSlider.trigger("destroy.owl.carousel").removeClass("owl-carousel");
+    }
 
-
-    /***
+    /**
      * SMOOTH SCROLL TO ANCHOR
      **/
 

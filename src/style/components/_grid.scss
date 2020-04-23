@@ -1,9 +1,41 @@
 //@import "../../../node_modules/bootstrap-4-grid/scss/grid.scss";
 
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
 
-//@media all and (min-width: 1200px) {
-//  .container {
-//    max-width: 1170px;
-//  }
-//}
+@media all and (max-width: 1200px) {
+  .container {
+    max-width: 1080px;
+  }
+}
+
+@media all and (max-width: 991px) {
+  .container {
+    max-width: 900px;
+    padding: 0 15px;
+  }
+}
+
+@media all and (max-width: 899px) {
+  .container {
+    max-width: 840px;
+    padding: 0 15px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .container {
+    max-width: 680px;
+  }
+}
+
+@media all and (max-width: 580px) {
+  .container {
+    max-width: 480px;
+  }
+}
+
 

@@ -2,28 +2,101 @@
   background-color: $off-white;
   padding: 60px 0 50px;
 
-  .card-list__item {
-    margin-bottom: 45px;
-
-    &:nth-child(6) {
-      .card__bg-img {
-        -webkit-background-size: 85%;
-        background-size: 85%;
-      }
-    }
-  }
-
   .card {
     text-align: center;
     line-height: 1.55;
     color: $dark-gray;
 
     &__bg-img {
-      background-position: center center;
+      background-position: center;
       background-repeat: no-repeat;
-      -webkit-background-size: 75%;
-      background-size: 75%;
-      min-height: 312px;
+      -webkit-background-size: 80%;
+      background-size: 80%;
+      min-height: 310px;
+    }
+  }
+
+  .card-list__item {
+    margin-bottom: 45px;
+
+    &:nth-child(6) {
+      .card__bg-img {
+        -webkit-background-size: 92%;
+        background-size: 92%;
+      }
+    }
+  }
+}
+
+@media all and(max-width: 991px) {
+  .section-functional {
+    .card-list {
+      justify-content: center;
+    }
+
+    .card-list__item {
+      width: 45%;
+    }
+
+    .card__bg-img {
+      -webkit-background-size: 63%;
+      background-size: 63%;
+    }
+
+    .card-list__item {
+      &:nth-child(6) {
+        .card__bg-img {
+          -webkit-background-size: 72%;
+          background-size: 72%;
+        }
+      }
+    }
+  }
+}
+
+@media all and(max-width: 768px) {
+  .section-functional {
+    .card-list__item {
+      width: 50%;
+    }
+
+    .card__bg-img {
+      min-height: 250px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media all and(max-width: 580px) {
+  .section-functional {
+    .card-list__item {
+      width: 90%;
+      margin: 0 auto 45px;
+    }
+
+    .card__bg-img {
+      -webkit-background-size: 50%;
+      background-size: 50%;
+      min-height: 230px;
+    }
+  }
+}
+
+@media all and(max-width: 480px) {
+  .section-functional {
+    .card-list__item {
+      width: 100%;
+      &:nth-child(6) {
+        .card__bg-img {
+          -webkit-background-size: 50%;
+          background-size: 50%;
+        }
+      }
+    }
+    .card__bg-img {
+      -webkit-background-size: 39%;
+      background-size: 39%;
+      min-height: 190px;
     }
   }
 }

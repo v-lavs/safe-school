@@ -19,7 +19,8 @@
   &_extra-small {
     font-size: 13px;
   }
-  &_white{
+
+  &_white {
     color: $white;
   }
 }
@@ -28,10 +29,48 @@
   font-size: 36px;
   font-weight: 400;
   color: $black;
-  &_medium{
+
+  &_medium {
     font-size: 30px;
   }
+
   &_big {
     font-size: 46px;
   }
+}
+
+
+@media all and(max-width: 990px) {
+  .title_big {
+    font-size: 34px;
+  }
+  .title_medium {
+    font-size: 26px;
+  }
+}
+
+@media all and (max-width: 580px) {
+  .text {
+    &_xl {
+      //font-size: 30px;
+    }
+
+    &_medium {
+      //font-size: 20px;
+    }
+  }
+  .title {
+    //font-size: 36px;
+    font-weight: 400;
+    color: $black;
+
+    &_medium {
+      //font-size: 30px;
+    }
+
+    &_big {
+      //font-size: 46px;
+    }
+  }
+
 }

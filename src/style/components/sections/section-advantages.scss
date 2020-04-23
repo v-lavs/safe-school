@@ -1,12 +1,15 @@
 .section-advantages {
+  position: relative;
   -webkit-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   min-height: 596px;
   padding: 65px 0 75px;
+  margin-top: -128px;
   color: $white;
   line-height: 1.55;
+  z-index: 2;
 
   .wrap-btn {
     text-align: center;
@@ -18,14 +21,16 @@
     &__bg-icon {
       background-position: center center;
       background-repeat: no-repeat;
-      -webkit-background-size: 82px;
-      background-size: 82px;
+      -webkit-background-size: contain;
+      background-size: contain;
       height: 82px;
       margin-bottom: 15px;
     }
   }
 
   .card-list__item {
+    width: 25%;
+    text-align: center;
     margin-bottom: 55px;
 
     &:nth-child(4) {
@@ -36,3 +41,89 @@
     }
   }
 }
+
+@media all and(max-width: 1254px) {
+  .section-advantages {
+    margin-top: -125px;
+  }
+}
+
+@media all and(max-width: 1200px) {
+  .section-advantages {
+    margin-top: -110px;
+  }
+}
+
+@media all and(max-width: 990px) {
+  .section-advantages {
+    margin-top: -90px;
+
+    .card-list__item {
+      width: 50%;
+
+    }
+
+    .card__bg-icon {
+      height: 72px;
+    }
+  }
+}
+
+@media all and(max-width: 860px) {
+  .section-advantages {
+    margin-top: -80px;
+  }
+}
+
+@media all and(max-width: 767px) {
+  .section-advantages {
+    margin-top: -120px;
+  }
+}
+
+@media all and(max-width: 750px) {
+  .section-advantages {
+    margin-top: -115px;
+  }
+}
+
+@media all and(max-width: 580px) {
+  .section-advantages {
+    margin-top: -90px;
+
+    .card-list__item {
+      margin-bottom: 30px;
+
+      &:nth-child(4) {
+        .card__bg-icon {
+          -webkit-background-size: 140px;
+          background-size: 110px;
+        }
+      }
+    }
+
+    .card__bg-icon {
+      height: 62px;
+    }
+  }
+}
+
+@media all and(max-width: 480px) {
+  .section-advantages {
+    margin-top: -155px;
+  }
+}
+@media all and(max-width: 420px) {
+  .section-advantages {
+    margin-top: -130px;
+    .card-list__item {
+      width: 100%;
+    }
+  }
+}
+@media all and(max-width: 320px) {
+  .section-advantages {
+    margin-top: -110px;
+  }
+}
+

@@ -7,40 +7,8 @@
     position: relative;
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
-
-  .info-box {
-    display: flex;
-    max-width: 390px;
-  }
-
-  .footer-logo {
-    position: relative;
-    display: inline-block;
-    width: 212px;
-    height: 87px;
-    padding-right: 26px;
-  }
-
-  .footer-logo:before {
-    position: absolute;
-    content: '';
-    display: block;
-    background-color: $light-green-100;
-    opacity: .3;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    width: 1px;
-    z-index: 1;
-  }
-
-  .logo {
-    width: 135px;
-    height: 87px;
-    padding-left: 26px;
-  }
-
 
   .footer-nav {
     display: flex;
@@ -51,9 +19,10 @@
 
   .menu {
     display: flex;
+    flex-wrap: wrap;
     color: $light-gray-100;
 
-    &-item {
+    .menu-item {
       margin-left: 40px;
       margin-bottom: 0;
 
@@ -81,8 +50,9 @@
       padding-left: 30px;
       margin-left: 28px;
       transition: .35s;
+
       &:hover,
-      &:focus{
+      &:focus {
         text-decoration: underline;
         transition: .35s;
       }
@@ -95,6 +65,74 @@
       left: 0;
       top: 2px;
       z-index: 1;
+    }
+  }
+}
+
+@media all and(max-width: 1200px) {
+  .footer {
+    .footer-nav {
+      width: 60%;
+    }
+
+    .menu {
+      width: 100%;
+      justify-content: flex-end;
+    }
+
+    .right-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media all and(max-width: 991px) {
+  .footer {
+    .container {
+      align-items: flex-start;
+    }
+
+    .link-right-bar {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media all and(max-width: 480px) {
+  .footer {
+    .container {
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .info-box,
+    .footer-nav {
+      width: 100%;
+      text-align: center;
+    }
+
+    .info-box {
+      margin: 0 auto 30px;
+    }
+
+    .right-bar {
+      width: 100%;
+    }
+
+    .right-bar,
+    .menu {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .menu .menu-item,
+    .right-bar .link-right-bar {
+      margin-left: 0;
+      margin-bottom: 10px;
     }
   }
 }

@@ -6,17 +6,17 @@ html {
 body {
   position: relative;
   background-color: $white;
+
+  &.noscroll {
+    position: fixed;
+    overflow: hidden;
+  }
 }
 
 .wrapper {
   overflow: hidden;
 }
 
-.container {
-  max-width: 1250px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
 
 .img {
   width: 100%;
@@ -33,33 +33,132 @@ body {
   line-height: 1.55;
   font-family: $secondary-font;
 }
-  .decor-title{
-    &:before,
-    &:after{
-      position: absolute;
-      content: '';
-      display: block;
-      width: 25px;
-      height: 25px;
-      border: 3px solid #acd947;
-      border-radius: 5px;
-      background-color: transparent;
-      top: -10px;
-      left: 50%;
-    }
+
+.decor-title {
+  &:before,
+  &:after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 25px;
+    height: 25px;
+    border: 3px solid #acd947;
+    border-radius: 5px;
+    background-color: transparent;
+    top: -10px;
+    left: 47%;
+  }
+
+  &:before {
+    transform: translateX(-33%) rotate(45deg);
+  }
+
+  &:after {
+    transform: translateX(33%) rotate(45deg);
+  }
+
+  &_white {
+    color: $white;
+
+    &:after,
     &:before {
-         transform: translateX(-33%) rotate(45deg);
+      border: 3px solid $white;
     }
-    &:after{
-      transform: translateX(33%) rotate(45deg);
-       }
-    &_white{
-      color: $white;
-      &:after,
-      &:before{
-        border: 3px solid $white;
-      }
-    }
+  }
 
 }
 
+.info-box {
+  display: flex;
+  max-width: 390px;
+}
+
+.logo-site {
+  position: relative;
+  display: inline-block;
+  width: 212px;
+  height: auto;
+  padding-right: 26px;
+}
+
+.logo-site:before {
+  position: absolute;
+  content: '';
+  display: block;
+  background-color: #90c633;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 1px;
+  z-index: 1;
+}
+
+.logo {
+  width: 135px;
+  height: auto;
+  padding-left: 26px;
+}
+
+.backdrop {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: $green;
+  opacity: .8;
+  z-index: 900;
+}
+
+@media all and (max-width: 1200px) {
+  .info-box {
+    max-width: 270px;
+  }
+  .logo-site {
+    width: 160px;
+    padding-right: 20px;
+  }
+  .logo {
+    width: 100px;
+    padding-left: 20px;
+  }
+}
+
+@media all and(max-width: 990px) {
+  html{
+    line-height: 1.25;
+  }
+  .section-title {
+    font-size: 34px;
+    margin-bottom: 30px;
+  }
+}
+
+@media all and (max-width: 580px) {
+  html{
+    font-size: 20px;
+  }
+  .info-box {
+    max-width: 190px;
+  }
+  .logo-site {
+    width: 160px;
+    padding-right: 10px;
+  }
+  .logo {
+    width: 100px;
+    padding-left: 10px;
+  }
+  .section-title{
+    font-size: 27px;
+    padding-top: 30px;
+    line-height: 1.25;
+  }
+}
+
+@media all and (max-width: 580px) {
+  .info-box {
+    max-width: 152px;
+  }
+}
