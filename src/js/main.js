@@ -14,10 +14,10 @@ $(document).ready(function () {
     var scrolled;
     window.onscroll = function () {
         scrolled = window.pageYOffset || document.documentElement.scrollTop;
-        if (scrolled > 100) {
+        if (scrolled > 80) {
             $(".header").css({"background": "linear-gradient(to right, #30b025, #6fd230)"})
         }
-        if (100 > scrolled) {
+        if (80 > scrolled) {
             $(".header").css({"background": "transparent"})
         }
     }
