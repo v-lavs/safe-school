@@ -11,6 +11,7 @@
     &__item {
       display: flex;
       flex-direction: column;
+      align-items: center;
       max-width: 405px;
       padding: 0 5px;
       &:nth-child(4),
